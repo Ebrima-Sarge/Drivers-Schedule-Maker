@@ -1,0 +1,69 @@
+body,html {
+  max-width: 100%;
+  max-height: 90vh;
+  background-color: rgba(255, 244, 200, 1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.toggleIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* 1. This is the base state of the menu (Closed) */
+.menuContainer {
+  background-color: rgba(53, 33, 2, 1);
+  position: fixed;
+  top: 0;
+  right: -300px; /* Hide it exactly 300px off the RIGHT side of the screen */
+  width: 300px;
+  height: 100vh;
+  z-index: 1000;
+  
+  /* This tells it to slide smoothly instead of teleporting */
+  transition: right 0.3s ease-in-out; 
+}
+
+/* 2. This is the Open state (No space between the words!) */
+.menuContainer.open {
+  left: 0; /* When this class is added, slide it to the right edge */
+}
+
+
+.optionCard  {
+
+  border-radius: 10px;
+    background-color: #352102;
+    padding: 10px;
+    width: 150px; /* Give it a reasonable width */
+    position: absolute; /* Important for accurate positioning */
+    top: 160px; /* Adjust this based on the height of your header/title area */
+    right: 50px; /* Position it 50px from the right edge */
+    z-index: 500; 
+    color: rgb(255, 255, 255);
+    
+    /* --- Hiding Mechanism --- */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+
+}
+
+.optionCard.Open{
+
+ 
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+

@@ -1,0 +1,7 @@
+export { ReactComponent as VectorToggle} from './VectorToggle.svg'
+export {ReactComponent as VectorOpen} from './VectorOpen.svg'
+export {ReactComponent as VectorDelete} from './VectorDelete.svg'
+export {ReactComponent as VectorExit} from './VectorExit.svg'
+export {ReactComponent as VectorFilter} from './VectorFilter.svg'
+export {ReactComponent as VectorOptions} from './VectorOptions.svg'
+export {ReactComponent as Vectorclock} from './clock.svg'
