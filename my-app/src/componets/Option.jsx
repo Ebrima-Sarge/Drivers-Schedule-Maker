@@ -2,7 +2,7 @@ import { VectorExit } from "./icons";
 import '../App.css';
 
 // Accept onAddRide prop
-export function Option({ isOptionOpen, setIsOptionOpen, onAddRide }) {
+export function Option({ isOptionOpen, setIsOptionOpen, onAddRide, onDelete, onUpdate }) {
     
     // Handle the "Add New" click
     const handleAddNew = () => {
@@ -10,6 +10,18 @@ export function Option({ isOptionOpen, setIsOptionOpen, onAddRide }) {
             onAddRide();
         }
     };
+
+    const Deletesection = ()=> {
+        if (onDelete) {
+            onDelete();
+        }
+    };
+
+    const handleInputChange = () => {
+        if (onUpdate) {
+            onUpdate();
+        };
+    }
 
     return (
         <div className={`optionCard ${isOptionOpen ? 'Open' : ''}`}>
@@ -19,8 +31,8 @@ export function Option({ isOptionOpen, setIsOptionOpen, onAddRide }) {
                 {/* Attach the handler to the Add New list item */}
                 <li onClick={handleAddNew} style={{ cursor: 'pointer' }}>Add New</li> 
                 
-                <li style={{ cursor: 'pointer' }}>Select</li>
-                <li style={{ cursor: 'pointer' }}>Update</li>
+                <li onClick = {Deletesection} style={{ cursor: 'pointer' }}>Delete</li>
+                <li onClick = {handleInputChange} style={{ cursor: 'pointer' }}>Update</li>
             </ul>
         </div>
     );
