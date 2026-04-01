@@ -5,22 +5,17 @@ import { VectorExit } from "./icons";
 
 export function DropMenu({ isMenuOpen, setIsMenuOpen }) {
     
-    // 🚨 REMOVED the "if(!isMenuOpen) return null" so the animation can actually happen!
 
     return ( 
-        /* 
-           This dynamic class adds "open" to the string when isMenuOpen is true.
-           Resulting in: className="menuContainer open"
-        */
+      
+        
         <div className={`menuContainer ${isMenuOpen ? 'open' : ''}`}>
             
           
                 <nav>
                     {/* Wrapped the Exit icon in a div to properly push it to the right */}
                     <div style={{ display: "flex", justifyContent: "flex-end", padding: "10px" }}>
-                        <VectorExit 
-                            onClick={() => setIsMenuOpen(false)} 
-                            style={{ height: "30px", width: "30px", cursor: "pointer", color: "white" }} 
+                        <VectorExit onClick={() => setIsMenuOpen(false)} style={{ height: "30px", width: "30px", cursor: "pointer", color: "white" }} 
                         />
                     </div>
 
