@@ -18,7 +18,7 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
         
         <VectorOpen onClick={() => setIsMenuOpen(true)} style= {{width: '20px', hight: '20px', cursor: 'pointer'}} />
 
-            <h1> Drivers Lap</h1>
+            <h1 style ={{fontFamily: "Cursive", color: "#371C11", fontSize: "2rem"}}> RIDES LAP </h1>
 
         <VectorToggle style= {{width: '45px', hight: '45px', cursor: 'pointer'}} />
         </div>

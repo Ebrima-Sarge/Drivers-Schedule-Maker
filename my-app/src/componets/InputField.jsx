@@ -205,8 +205,7 @@ const deleteCheckedRides = () => {
 
     return (
         <>
-         <History history={history} />
-            <div style={{ display: 'flex', justifyContent: "space-between", gap: '10px', marginTop: '15rem', marginLeft: '3rem' }}>
+            <div style={{ display: 'flex', justifyContent: "space-between", gap: '10px', marginTop: '5rem', marginLeft: '3rem' }}>
                 <h1 style={{ fontSize: '24px', margin: 0 }}>
                     Upcoming Rides
                 </h1>
@@ -234,7 +233,7 @@ const deleteCheckedRides = () => {
                  <p style={{ marginLeft: '50px' }}>No rides found.</p>
             )}
 
-            <h2 style={{ marginLeft: '50px', marginTop: '30px' }}>Set duration for your up coming rides </h2>
+            <h2 style={{ marginLeft: '50px', marginTop: '3rem' }}>Set duration for your up coming rides </h2>
             {rides.map((ride, index) => (
                 <div key={ride.apiId || index}
                     style={{ 
